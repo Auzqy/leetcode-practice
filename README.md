@@ -3,21 +3,14 @@
 #### 介绍
 leetcode官网（https://leetcode.com）学习笔记及想法
 
-#### 软件架构
-软件架构说明
+#### 练习顺序
 
-
-#### 安装教程
-
-1. xxxx
-2. xxxx
-3. xxxx
+1. 数组
+2. 链表
 
 #### 使用说明
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. 每个包下的类，都有main方法，替换对应的方法就可以运行了
 
 #### 参与贡献
 
@@ -25,7 +18,6 @@ leetcode官网（https://leetcode.com）学习笔记及想法
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
-
 
 #### 码云特技
 
