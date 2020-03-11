@@ -14,10 +14,10 @@ public class RemoveElement0027 {
 
     public static void main(String[] args) {
 //        int[] nums = {0,0,1,1,1,2,2,3,3,4};
-        int[] nums = {0,0};
-//        int[] nums = {0,1};
+//        int[] nums = {0,0,1};
+        int[] nums = {0,1};
 //        int[] nums = {};
-        System.out.println(removeElementSolutions1_au(nums,0));
+        System.out.println(removeElementSolutions1_au(nums,2));
         System.out.println(Arrays.toString(nums));
     }
 
@@ -36,12 +36,18 @@ public class RemoveElement0027 {
 //            return 0;
 //        }
         int head = 0;
-        for (int tail = 1; tail < nums.length; tail++) {
+        for (int tail = head + 1; tail < nums.length; tail++) {
             if (nums[head] == val && nums[tail] != val) {
-                nums[head++] = nums[tail];
+                int temp = nums[head];
+                nums[head] = nums[tail];
+                nums[tail] = temp;
+                head++;
+            }else if(nums[head] != val){
+                head++;
             }
         }
-        return nums.length - head;
+//        return nums.length - head;
+        return head;
     }
 
 }
