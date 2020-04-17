@@ -20,24 +20,20 @@ public class ListCommonUtil {
             listNode2 = listNode2.next;
             listNode1 = listNode1.next;
         }
-        if (listNode1 == null && listNode2 == null) {
-            return true;
-        } else {
-            return false;
-        }
+        return listNode1 == null && listNode2 == null;
     }
 
     public ListNode buildListNode(int[] listNodeValue) {
         if (listNodeValue == null) {
             return null;
         }
-        ListNode hummyHead = new ListNode(0);
-        ListNode curr = hummyHead;
+        ListNode dummyHead = new ListNode(0);
+        ListNode curr = dummyHead;
         for (int value : listNodeValue) {
             curr.next = new ListNode(value);
             curr = curr.next;
         }
-        return hummyHead.next;
+        return dummyHead.next;
     }
 
     public String printListNode(ListNode listNode) {

@@ -26,7 +26,7 @@ public class Solution_0021 {
      * }
      */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode hummyHead = new ListNode(0);
+        ListNode dummyHead = new ListNode(0);
         if (l1 == null) {
             return l2;
         }
@@ -34,7 +34,7 @@ public class Solution_0021 {
             return l1;
         }
 
-        ListNode curr = hummyHead;
+        ListNode curr = dummyHead;
         while (l1 != null && l2 != null) {
             if (l1.val <= l2.val) {
                 curr.next = new ListNode(l1.val);
@@ -52,7 +52,7 @@ public class Solution_0021 {
             curr.next = l1;
         }
 
-        return hummyHead.next;
+        return dummyHead.next;
     }
 
 }
