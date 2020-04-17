@@ -18,10 +18,21 @@
 
 
     <dependencies>
+        <!-- ========== junit5 start ========== -->
+        <!-- 用于在jvm上启动测试框架，
+            统一命令行、Gradle 和 Maven 等方式执行测试的入口 -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
         </dependency>
+
+        <!-- 包含 JUnit5.x 全新的编程模型和扩展机制 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+        </dependency>
+
+        <!-- ========== junit5 end ========== -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

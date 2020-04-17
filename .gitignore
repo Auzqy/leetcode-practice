@@ -4,3 +4,7 @@
 # au added
 .idea/
 target/
+.project
+.settings/
+*.classpath
+*.factorypath
