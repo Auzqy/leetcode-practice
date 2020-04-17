@@ -28,6 +28,9 @@ public class ListCommonUtil {
     }
 
     public ListNode buildListNode(int[] listNodeValue) {
+        if (listNodeValue == null) {
+            return null;
+        }
         ListNode hummyHead = new ListNode(0);
         ListNode curr = hummyHead;
         for (int value : listNodeValue) {
@@ -38,6 +41,10 @@ public class ListCommonUtil {
     }
 
     public String printListNode(ListNode listNode) {
+        if (listNode == null) {
+            return null;
+        }
+
         StringBuilder sb = new StringBuilder();
         while (listNode != null) {
             sb.append(listNode.val).append(" ");
