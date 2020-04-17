@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ListCommonTest {
+class ListCommonUtilTest {
 
     static Stream<Arguments> expectedBoolean_inputListNode1_inputListNode2() {
         return Stream.of(

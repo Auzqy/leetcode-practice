@@ -2,7 +2,7 @@ package top.auzqy.common;
 
 import top.auzqy._0001_0050._0021.ListNode;
 
-public class ListCommon {
+public class ListCommonUtil {
 
     public boolean compare(ListNode listNode1, ListNode listNode2) {
 
