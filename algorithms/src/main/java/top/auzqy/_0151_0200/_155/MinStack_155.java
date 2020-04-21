@@ -56,15 +56,21 @@ class MinStack_155 {
             minStack.pop();
         }
     }
-    
-    public int top() {
 
-        return 0;
+    public int top() {
+        if(!normalStack.isEmpty()){
+            return normalStack.peek();
+        }
+        throw new RuntimeException("栈中元素为空，此操作非法");
     }
-    
+
     public int getMin() {
-        return 0;
+        if(!minStack.isEmpty()){
+            return minStack.peek();
+        }
+        throw new RuntimeException("栈中元素为空，此操作非法");
     }
+
 }
 
 /**
