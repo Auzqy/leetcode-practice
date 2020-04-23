@@ -60,7 +60,7 @@ public class Solution_1248 {
         oddArr[feed + 1] = len;
 
         for (int i = 1; i + k < feed + 2; i++) {
-            res += (oddArr[i + 1] - oddArr[i]) * (oddArr[i + k] - oddArr[i + k - 1]);
+            res += (oddArr[i] - oddArr[i - 1]) * (oddArr[i + k] - oddArr[i + k - 1]);
         }
 
         return res;
