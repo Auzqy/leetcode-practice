@@ -80,7 +80,10 @@ public class Solution_0020 {
 
     public boolean solution2(String s) {
         if (s.contains("()") || s.contains("[]") || s.contains("{}")) {
-            return isValid(s.replace("()", "").replace("[]", "").replace("{}", ""));
+            return isValid(
+                    s.replace("()", "")
+                            .replace("[]", "")
+                            .replace("{}", ""));
         } else {
             return "".equals(s);
         }
