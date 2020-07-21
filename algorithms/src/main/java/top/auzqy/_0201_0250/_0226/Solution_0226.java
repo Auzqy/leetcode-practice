@@ -3,6 +3,11 @@ package top.auzqy._0201_0250._0226;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * description:  https://leetcode-cn.com/problems/invert-binary-tree/
+ * createTime: 2020/7/21 11:19
+ * @author au
+ */
 public class Solution_0226 {
     public TreeNode invertTree(TreeNode root) {
 
