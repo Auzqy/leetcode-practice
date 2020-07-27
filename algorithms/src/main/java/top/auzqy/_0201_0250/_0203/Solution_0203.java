@@ -1,7 +1,7 @@
 package top.auzqy._0201_0250._0203;
 
 /**
- * description:  https://leetcode-cn.com/problems/invert-binary-tree/
+ * description:
  * createTime: 2020/7/21 11:19
  * @author au
  */
