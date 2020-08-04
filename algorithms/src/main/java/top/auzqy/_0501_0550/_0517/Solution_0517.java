@@ -39,7 +39,7 @@ public class Solution_0517 {
 
         for (int dressNum : machines) {
             beforeCurSum += dressNum;
-            maxDressNum = Math.max(machinesNum, dressNum);
+            maxDressNum = Math.max(maxDressNum, dressNum);
             res = Math.max(maxDressNum, Math.abs(beforeCurSum));
         }
 
