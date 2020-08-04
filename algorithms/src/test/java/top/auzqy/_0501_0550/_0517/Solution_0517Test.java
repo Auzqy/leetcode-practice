@@ -13,6 +13,7 @@ class Solution_0517Test {
         return Stream.of(
                 Arguments.of(-1,new int[]{0,2,0}),
                 Arguments.of(3,new int[]{1,0,5}),
+                Arguments.of(8,new int[]{0,0,11,5}),
                 Arguments.of(2,new int[]{0,3,0})
         );
     }

@@ -40,22 +40,11 @@ public class Solution_0517 {
         for (int dressNum : machines) {
             beforeCurSum += dressNum;
             maxDressNum = Math.max(maxDressNum, dressNum);
-            res = Math.max(maxDressNum, Math.abs(beforeCurSum));
+            int tmpRes = Math.max(maxDressNum, Math.abs(beforeCurSum));
+            res = Math.max(res, tmpRes);
         }
 
         return res;
-
-//        // currSum is a number of dresses to move at this point,
-//        // maxSum is a max number of dresses to move at this point or before,
-//        // m is number of dresses to move out from the current machine.
-//        int currSum = 0, maxSum = 0, tmpRes = 0, res = 0;
-//        for (int dressNum : machines) {
-//            currSum += dressNum;
-//            maxSum = Math.max(maxSum, Math.abs(currSum));
-//            tmpRes = Math.max(maxSum, dressNum);
-//            res = Math.max(res, tmpRes);
-//        }
-//        return res;
 
     }
 
