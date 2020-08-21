@@ -1,7 +1,9 @@
 package top.auzqy._0301_0350._0322;
 
+import java.util.Arrays;
+
 /**
- * description: 322. 零钱兑换
+ * description: 322. 零钱兑换 todo 没太理解
  * 给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。
  *
  *  
@@ -33,7 +35,33 @@ public class Solution_0322 {
 
     public int coinChange(int[] coins, int amount) {
 //        return solution1_by_copy(coins, amount);
-        return solution2_by_copy(coins, amount);
+//        return solution2_by_copy(coins, amount);
+        return solution3_by_copy(coins, amount);
+    }
+
+    /**
+     * description: 动态规划：自下而上 [通过]
+     * Time Complexity: O(Sn)
+     * Space Complexity: O(S)
+     * createTime: 2020/8/21 15:29
+     * @author au
+     * @param coins
+     * @param amount
+     * @return
+     */
+    private int solution3_by_copy(int[] coins, int amount) {
+        int max = amount + 1;
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp, max);
+        dp[0] = 0;
+        for (int i = 1; i <= amount; i++) {
+            for (int coin : coins) {
+                if (coin <= i) {
+                    dp[i] = Math.min(dp[i], dp[i - coin] + 1);
+                }
+            }
+        }
+        return dp[amount] > amount ? -1 : dp[amount];
     }
 
     /**
