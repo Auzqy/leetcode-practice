@@ -34,6 +34,19 @@ public class Solution_0064 {
 
     public int minPathSum(int[][] grid) {
 
+        return solution1_by_au(grid);
+    }
+
+
+
+    /**
+     * 执行用时：4 ms, 在所有 Java 提交中击败了 22.10% 的用户
+     * 内存消耗：42.3 MB, 在所有 Java 提交中击败了83.19%的用户
+     *
+     * @param grid
+     * @return
+     */
+    private int solution1_by_au(int[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
 
