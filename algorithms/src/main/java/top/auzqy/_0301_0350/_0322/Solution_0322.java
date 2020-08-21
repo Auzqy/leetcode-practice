@@ -36,6 +36,18 @@ public class Solution_0322 {
         return solution2_by_copy(coins, amount);
     }
 
+    /**
+     * description: 动态规划-自上而下 [通过]
+     * https://leetcode-cn.com/problems/coin-change/solution/322-ling-qian-dui-huan-by-leetcode-solution/
+     *
+     * Time Complexity: O(Sn)
+     * Space Complexity: O(S)
+     * createTime: 2020/8/21 15:17
+     * @author au
+     * @param coins
+     * @param amount
+     * @return
+     */
     private int solution2_by_copy(int[] coins, int amount) {
         if (amount < 1) {
             return 0;
