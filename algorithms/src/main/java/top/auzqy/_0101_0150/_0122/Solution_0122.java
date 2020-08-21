@@ -8,7 +8,56 @@ package top.auzqy._0101_0150._0122;
 public class Solution_0122 {
 
     public int maxProfit(int[] prices) {
-        return solution1_by_copy(prices, 0);
+//        return solution1_by_copy(prices, 0);
+        return solution2_by_copy(prices);
+//        return solution3_by_copy(prices);
+    }
+
+    /**
+     * description: 峰谷法
+     * Time Complexity: O(n)
+     * Space Complexity: O(1)
+     * createTime: 2020/8/21 21:51
+     * @author au
+     * @param prices
+     * @return
+     */
+    private int solution2_by_copy(int[] prices) {
+        int i = 0;
+        int valley = prices[0];
+        int peak = prices[0];
+        int maxprofit = 0;
+        while (i < prices.length - 1) {
+            while (i < prices.length - 1 && prices[i] >= prices[i + 1]) {
+                i++;
+            }
+            valley = prices[i];
+            while (i < prices.length - 1 && prices[i] <= prices[i + 1]) {
+                i++;
+            }
+            peak = prices[i];
+            maxprofit += peak - valley;
+        }
+        return maxprofit;
+    }
+
+    /**
+     * description: 简单的一次遍历
+     * Time Complexity: O(n)
+     * Space Complexity: O(1)
+     * createTime: 2020/8/21 21:40
+     * @author au
+     * @param prices
+     * @return
+     */
+    private int solution3_by_copy(int[] prices) {
+        int maxProfit = 0;
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] > prices[i - 1]) {
+                maxProfit += prices[i] - prices[i - 1];
+            }
+        }
+        return maxProfit;
     }
 
     /**
