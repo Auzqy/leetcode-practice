@@ -11,7 +11,32 @@ import java.util.List;
  */
 public class Solution_0118 {
     public List<List<Integer>> generate(int numRows) {
-        return solution1_by_au(numRows);
+//        return solution1_by_au(numRows);
+        return solution1_optimize_by_au(numRows);
+    }
+
+    private List<List<Integer>> solution1_optimize_by_au(int numRows) {
+        List<List<Integer>> res = new ArrayList<>(numRows);
+
+        for (int i = 1; i <= numRows; i++) {
+            List<Integer> innerList = new ArrayList<>(i);
+            if (i == 1) {
+                innerList.add(1);
+            } else if (i == 2) {
+                innerList.add(1);
+                innerList.add(1);
+            } else {
+                innerList.add(1);
+                for (int j = 1; j < i-1; j++) {
+                    List<Integer> last = res.get(i-2);
+                    innerList.add(last.get(j - 1) + last.get(j));
+                }
+                innerList.add(1);
+            }
+            res.add(innerList);
+        }
+
+        return res;
     }
 
     private List<List<Integer>> solution1_by_au(int numRows) {
