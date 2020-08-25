@@ -12,7 +12,31 @@ package top.auzqy._0001_0050._0026;
 public class Solution_0026 {
 
     public int removeDuplicates(int[] nums) {
-        return solution1_by_au(nums);
+//        return solution1_by_au(nums);
+        return solution2_by_copy(nums);
+    }
+
+    /**
+     * description:
+     * Time Complexity: O(n)
+     * Space Complexity: O(1)
+     * createTime: 2020/8/26 00:40
+     * @author au
+     * @param nums
+     * @return
+     */
+    private int solution2_by_copy(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int i = 0;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[j] != nums[i]) {
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        return i + 1;
     }
 
     /**
