@@ -16,6 +16,23 @@ public class Solution_0046 {
 
     public List<List<Integer>> permute(int[] nums) {
 
+        return solution1_by_au(nums);
+    }
+
+    /**
+     * description:
+     *
+     * 执行用时：3 ms, 在所有 Java 提交中击败了47.13%的用户
+     * 内存消耗：40.2 MB, 在所有 Java 提交中击败了23.18%的用户
+     *
+     * Time Complexity: O()
+     * Space Complexity: O()
+     * createTime: 2020/8/29 12:07
+     * @author au
+     * @param nums
+     * @return
+     */
+    private List<List<Integer>> solution1_by_au(int[] nums) {
         List<List<Integer>> res = new LinkedList<>();
         List<Integer> levelList = new ArrayList<>(nums.length);
         recur(res, nums, levelList);
