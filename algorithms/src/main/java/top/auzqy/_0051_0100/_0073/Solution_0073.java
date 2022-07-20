@@ -1,5 +1,6 @@
 package top.auzqy._0051_0100._0073;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -55,5 +56,4 @@ public class Solution_0073 {
             }
         }
     }
-
 }
